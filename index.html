@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/d4d5d401ed.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div id="header">
@@ -39,34 +39,77 @@
             <p>I've been working as HR Professional for the past 5 years and let me tell you what it has given me. A burnout! I know, a shocker. However, it has also given me invaluable experience where I got to learn about people. As all employers like to say, 'Our employees are our biggest asset', which to be honest, is the truth. I would love to see how the future of tech can impact the people and I want to be a part of the change and that is why I'm here, and I'm guessing you are too.</p>
 
             <div class="tab-titles">
-              <p class="tab-links active-link">Skills</p>
-              <p class="tab-links">Experience</p>
-              <p class="tab-links">Education</p>
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('experience')">Experience</p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
             </div>
-            <div class="tab-contents">
+            <div class="tab-contents active-tab" id="skills">
               <ul>
-                <li><span>Human Resource</span><br>Managing Projects</li>
-                <li><span>Analysis</span><br>Compensation & Benefits</li>
-                <li><span>Technology</span><br>Digitalisation</li>
+                <li><span>Microsoft Office</span><br>Excel, PowerPoint, Power BI, Power Automate</li>
+                <li><span>Project Management</span><br>Detail and Result oriented</li>
+                <li><span>SAP</span><br>5 years experience handling SAP</li>
               </ul>
             </div>
-            <div class="tab-contents">
+            <div class="tab-contents" id="experience">
               <ul>
-                <li><span>Human Resource</span><br>Managing Projects</li>
+                <li><span>Human Resource</span><br>Managing People and HR Projects</li>
                 <li><span>Analysis</span><br>Compensation & Benefits</li>
-                <li><span>Technology</span><br>Digitalisation</li>
+                <li><span>Technology</span><br>HR Digitalisation Projects</li>
               </ul>
             </div>
-            <div class="tab-contents minutes 33.05">
+            <div class="tab-contents" id="education">
               <ul>
-                <li><span>Human Resource</span><br>Managing Projects</li>
-                <li><span>Analysis</span><br>Compensation & Benefits</li>
-                <li><span>Technology</span><br>Digitalisation</li>
+                <li><span>Current</span><br>Full Stack Web Developer</li>
+                <li><span>2016 - 2020</span><br>Bachelor Degree in Business Administration</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-------------services------------->
+
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Design</h2>
+            <p>Beginner at web designing, unfortunately. Still working my ass there. xxxxxxxxxxxxxxx xxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxx xxxxxxxxxxxxxx xxxxxxxxxxxxxx xxxxxxxxxxx.</p>
+            <a href="#">Learn more</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-crop-simple"></i>
+            <h2>UI/UX Design</h2>
+            <p>Beginner at UI/UX designing, unfortunately. Still working my ass there. xxxxxxxxxxxxxxx xxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxx xxxxxxxxxxxxxx xxxxxxxxxxxxxx xxxxxxxxxxx.</p>
+            <a href="#">Learn more</a>
+          </div>
+          <div>
+            <i class="fa-brands fa-app-store"></i>
+            <h2>App Design</h2>
+            <p>Beginner at app designing, unfortunately. Still working my ass there. xxxxxxxxxxxxxxx xxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxx xxxxxxxxxxxxxx xxxxxxxxxxxxxx xxxxxxxxxxx.</p>
+            <a href="#">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link")
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+
+    </script>
   </body>
 </html>
